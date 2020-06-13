@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+    martgreen_client:
+        container_name: martgreen_client
+        restart: "unless-stopped"
+        build:
+            context: .
+            dockerfile: nuxt.docker
+        ports:
+            - '3000:3000'
+
+    martgreen_nginx:
+      container_name: martgreen_nginx
+      build:
+        context: .
+        dockerfile: nginx.docker
+      restart: unless-stopped
+      ports:
+        - "8401:80"
+      links:
+        - martgreen_client

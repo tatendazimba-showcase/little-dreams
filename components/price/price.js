@@ -1,22 +1,16 @@
-
 export default {
-  name: 'price',
+  name: 'Price',
   components: {},
-  props: [],
-  data () {
-    return {
-
+  props: {
+    price: {
+      type: Number,
+      required: true
     }
   },
-  computed: {
-
+  data() {
+    return {}
   },
-  mounted () {
-
-  },
-  methods: {
-
-  }
-}
-
-
+  computed: {},
+  mounted() { },
+  methods: {}
+};

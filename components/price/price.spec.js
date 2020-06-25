@@ -1,6 +1,5 @@
 import { shallowMount} from '@vue/test-utils'
 import Price from "./index";
-import price from '~/components/price/price'
 
 function createConfig (overrides) {
 

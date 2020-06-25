@@ -23,7 +23,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/node_modules/bootstrap/dist/css/bootstrap.css',
+    '@/node_modules/aos/dist/aos.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -39,11 +42,20 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/style-resources',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+
+  styleResources: {
+    scss: [
+      '@/node_modules/bootstrap/dist/bootstrap.css',
+      '@/assets/scss/_variables.scss',
+      '@/assets/scss/_mixins.scss'
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

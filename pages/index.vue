@@ -1,69 +1,24 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        little-dreams
-      </h1>
-      <h2 class="subtitle">
-        A little free online shopping shop. Please make an actual purchase in
-        the shop. It will be appreciated.
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <hero
+      :title="'Music Matters'"
+      :subtitle="'Live Online Tribute'"
+      :description="
+        'In honour of Stevie Wonder’s 70th birthday, Bang & Olufsen is presenting an online tribute ' +
+          'concert with Benjamin Koppel & Friends. The show is transmitted live from the Audo on Wednesday, ' +
+          'May 13 at 8 PM.'
+      "
+    />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/logo/index.vue';
+import Hero from '~/components/hero/';
 
 export default {
   components: {
-    Logo
+    Hero
   }
 };
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style></style>

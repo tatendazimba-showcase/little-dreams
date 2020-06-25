@@ -1,0 +1,6 @@
+<section>
+  <div class="avatar">
+    <span v-show="!user.avatarUrl" class="avatar-text">{{ user.username[0] }}</span>
+    <img v-show="user.avatarUrl" :src="user.avatarUrl" :alt="''">
+  </div>
+</section>

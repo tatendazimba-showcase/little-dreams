@@ -6,9 +6,6 @@ export default {
     return {};
   },
   computed: {},
-  mounted() {
-    console.log('route: ', this.$router);
-    console.log('route: ', window.$nuxt.$router);
-  },
+  mounted() {},
   methods: {}
 };

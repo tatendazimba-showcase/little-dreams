@@ -14,14 +14,11 @@ function createConfig (overrides) {
 }
 
 describe('Logo', () => {
-
   it('has img within element with class brand-logo',  () => {
+    const wrapper = shallowMount(Logo, createConfig());
 
-    const wrapper = shallowMount(Logo);
-
-    const brandLogoElement = wrapper.find(".brand-logo");
-    expect(brandLogoElement.find("img").exists()).toBe(true);
-
+    const brandLogo = wrapper.find(".brand-logo");
+    expect(brandLogo.find("img").exists()).toBe(true);
   });
 
 })
